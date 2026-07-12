@@ -234,7 +234,7 @@ h1, h2, h3, h4 {
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--forest-2); color: var(--cream); padding: clamp(56px,8vw,90px) 0 40px; }
-.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; }
 .site-footer h4 { font-family: var(--f-head); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; opacity: .6; margin: 0 0 16px; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .site-footer li a { font-size: 14.5px; opacity: .85; }
