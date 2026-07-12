@@ -30,10 +30,11 @@ if (reduce || !('IntersectionObserver' in window)) {
   els.forEach(el => io.observe(el));
 }
 
-// LAUNCH SWAP: real Stripe Payment Link (kept for when the demo is approved).
-// To take live orders, point the "Add to bag" / buy buttons ([data-buy]) at this URL:
+// LIVE: real Stripe Payment Link. Note: payment links are paused on the
+// Stripe account pending business verification (2-3 days) as of 2026-07-12 —
+// checkout will 404/error for buyers until that clears.
 const STRIPE_CHECKOUT = "https://buy.stripe.com/3cI6oH3Fv3Pqe4a25bd7q00";
-// e.g. document.querySelectorAll('[data-buy]').forEach(b => b.href = STRIPE_CHECKOUT);
+document.querySelectorAll('[data-buy]').forEach(b => { b.href = STRIPE_CHECKOUT; b.target = '_blank'; b.rel = 'noopener'; });
 
 // Early-access signup (demo: no backend yet — swap for real endpoint / Stripe on launch)
 const form = document.getElementById('signup');
