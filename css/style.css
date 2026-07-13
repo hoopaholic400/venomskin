@@ -213,13 +213,6 @@ h1, h2, h3, h4 {
 .founder .sig { margin-top: 24px; font-family: var(--f-head); font-weight: 600; letter-spacing: .02em; }
 .founder .sig small { display:block; font-family: var(--f-body); font-weight: 400; font-size: 13px; opacity: .7; letter-spacing: 0; text-transform: none; margin-top: 4px; }
 
-/* ---------- Testimonials ---------- */
-.quotes { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-.quote { border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 28px; background: var(--forest-2); }
-.quote .stars { color: var(--leaf); letter-spacing: 3px; font-size: 13px; }
-.quote p { font-size: 16px; margin: 16px 0 20px; line-height: 1.5; }
-.quote .who { font-size: 13px; font-weight: 600; letter-spacing: .04em; opacity: .8; }
-
 /* ---------- Email capture CTA ---------- */
 .cta-band { background: var(--leaf); color: var(--cream); text-align: center; padding: clamp(64px,10vw,120px) 0; }
 .cta-band h2 { font-size: clamp(36px,7vw,92px); text-transform: uppercase; letter-spacing: -0.02em; }
@@ -260,7 +253,7 @@ h1, h2, h3, h4 {
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .pdp, .split, .founder { grid-template-columns: 1fr; }
-  .ingredients, .quotes, .ritual { grid-template-columns: 1fr; }
+  .ingredients, .ritual { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
   .nav-toggle { display: block; }
