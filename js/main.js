@@ -33,16 +33,30 @@ if (reduce || !('IntersectionObserver' in window)) {
 const STRIPE_CHECKOUT = "https://buy.stripe.com/3cI6oH3Fv3Pqe4a25bd7q00";
 document.querySelectorAll('[data-buy]').forEach(b => { b.href = STRIPE_CHECKOUT; b.target = '_blank'; b.rel = 'noopener'; });
 
-// Early-access signup (demo: no backend yet — swap for real endpoint / Stripe on launch)
+// Early-access signup
 const form = document.getElementById('signup');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('email');
     if (!email.value || !email.checkValidity()) { email.focus(); return; }
-    form.style.display = 'none';
-    const ok = document.getElementById('signup-ok');
-    if (ok) ok.style.display = 'block';
-    // TODO on launch: POST email to list provider, or replace #early CTA with a Stripe Payment Link.
+    const button = form.querySelector('button[type="submit"]');
+    if (button) button.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('submit failed');
+      form.style.display = 'none';
+      const ok = document.getElementById('signup-ok');
+      if (ok) ok.style.display = 'block';
+    } catch {
+      if (button) button.disabled = false;
+      email.setCustomValidity('Something went wrong — please try again.');
+      email.reportValidity();
+      email.oninput = () => email.setCustomValidity('');
+    }
   });
 }
