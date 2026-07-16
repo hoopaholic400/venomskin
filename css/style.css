@@ -209,11 +209,12 @@ h1, h2, h3, h4 {
 .ingredient-lead sup a { color: var(--leaf); text-decoration: none; }
 .ingredient-lead sup a:hover { text-decoration: underline; }
 
-.refs { margin-top: 22px; max-width: 68ch; }
+.refs { margin-top: clamp(28px,4vw,40px); background: var(--forest-2); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: clamp(24px,4vw,36px); }
 .refs summary { cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   color: var(--olive); opacity: .75; }
 .refs summary:hover { opacity: 1; }
-.refs ol { margin: 14px 0 0; padding-left: 20px; display: grid; gap: 9px; }
+.refs ol { margin: 14px 0 0; padding-left: 20px; display: grid; gap: 9px; max-width: 68ch; }
 .refs li { font-size: 13px; opacity: .78; line-height: 1.55; }
 .refs a { color: var(--leaf); text-decoration: underline; text-underline-offset: 2px; word-break: break-word; }
 .refs a:hover { opacity: .85; }
@@ -224,6 +225,9 @@ h1, h2, h3, h4 {
 .ingredients-support .icard { padding: 24px 22px 26px; }
 .ingredients-support h3 { font-size: 19px; margin: 10px 0 8px; }
 .ingredients-support p { font-size: 14.5px; }
+.ingredients-support sup { font-size: 10px; line-height: 0; margin-left: 1px; }
+.ingredients-support sup a { color: var(--leaf); text-decoration: none; }
+.ingredients-support sup a:hover { text-decoration: underline; }
 
 /* ---------- Editorial two-image ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px,4vw,50px); align-items: center; }
