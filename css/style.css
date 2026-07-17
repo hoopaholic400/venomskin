@@ -177,7 +177,8 @@ h1, h2, h3, h4 {
 .pdp .subnote { font-size: 13px; opacity: .65; margin-top: 14px; }
 
 /* ---------- Mantra band ---------- */
-.mantra { background: var(--midnight); color: var(--cream); text-align: left; padding: clamp(70px,11vw,150px) 0; }
+.mantra { background: var(--forest-2); color: var(--cream); text-align: left; padding: clamp(70px,11vw,150px) 0;
+  border-bottom: 1px solid var(--leaf); }
 .mantra h2 { font-size: clamp(40px, 8vw, 116px); text-transform: uppercase; letter-spacing: -0.02em; line-height: .98; }
 .mantra h2 .em { color: var(--leaf); }
 .mantra .sub { margin-top: 26px; font-size: clamp(16px,2vw,20px); max-width: 52ch; opacity: .85; }
