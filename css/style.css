@@ -248,7 +248,7 @@ h1, h2, h3, h4 {
 /* ---------- Founder ---------- */
 .founder { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(28px,5vw,64px); align-items: center; }
 .founder-media { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5; background: var(--forest); }
-.founder-media img { width:100%; height:100%; object-fit: cover; }
+.founder-media img { width:100%; height:100%; object-fit: cover; object-position: center 15%; }
 .founder h2 { font-size: clamp(30px,4.5vw,58px); text-transform: uppercase; }
 .founder p { font-size: 17px; margin: 20px 0 0; opacity: .88; max-width: 50ch; }
 .founder .positioning { font-weight: 600; color: var(--leaf); opacity: 1; }
